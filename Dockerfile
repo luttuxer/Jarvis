@@ -1,5 +1,5 @@
-FROM quay.io/loki-xer/jarvis-md:latest
-RUN git clone https://github.com/Loki-Xer/Jarvis /root/Jarvis-md/
-WORKDIR /root/Jarvis-md/
+FROM lokixer/runtime:latest
+WORKDIR /jarvis
+RUN git clone https://github.com/Loki-Xer/jarvis.git .
 RUN yarn install --network-concurrency 1
 CMD ["npm", "start"]
